@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 void main() {
-
   runApp(const MyApp());
 }
 
@@ -15,14 +14,12 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
-        //
         // TRY THIS: Try running your application with "flutter run". You'll see
         // the application has a purple toolbar. Then, without quitting the app,
         // try changing the seedColor in the colorScheme below to Colors.green
         // and then invoke "hot reload" (save your changes or press the "hot
         // reload" button in a Flutter-supported IDE, or press "r" if you used
         // the command line to start the app).
-        //
         // Notice that the counter didn't reset back to zero; the application
         // state is not lost during the reload. To reset the state, use hot
         // restart instead.
@@ -36,7 +33,6 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
 
@@ -56,30 +52,20 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  var _counter = 0.0;
-  var myFontSize = 30.0;
-  void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
 
-      if(_counter<=49) {
-        _counter++;
-        myFontSize ++;
+  final TextEditingController login = new TextEditingController();
+  final TextEditingController password = new TextEditingController();
+  String imageSource = "images/question-mark.png";
+
+  void _loginClick() {
+    setState(() {
+      if(password.text == "QWERTY123"){
+        imageSource = "images/idea.png";
+      }
+      else{
+        imageSource = "images/stop.png";
       }
     });
-  }
-
-  void setNewValue(double value){
-    setState(() {
-      _counter = value;
-      myFontSize = value;
-
-    });
-
   }
   @override
   Widget build(BuildContext context) {
@@ -118,24 +104,29 @@ class _MyHomePageState extends State<MyHomePage> {
           // wireframe for each widget.
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-              style: TextStyle(fontSize: myFontSize),
+            TextField(
+                controller: login,
+                decoration: const InputDecoration(
+                  hintText: "Enter a user name",
+                  labelText: "Login",
+                  border: OutlineInputBorder(),
+                )
             ),
-
-            Text(
-              '$_counter',
-              style: TextStyle(fontSize: myFontSize),
+            TextField(
+                controller: password,
+                obscureText:
+                true, //hide the password when typing
+                decoration: const InputDecoration(
+                  hintText: "Enter your password",
+                  labelText: "Password",
+                  border: OutlineInputBorder(),
+                )
             ),
-            Slider(value: _counter, onChanged: setNewValue, min:0, max:50)
+            ElevatedButton(onPressed: _loginClick, child: Text("Login")),
+            Image.asset(imageSource, width: 300, height: 300)
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
