@@ -107,7 +107,7 @@ class _MyHomePageState extends State<MyHomePage> {
             TextField(
                 controller: login,
                 decoration: const InputDecoration(
-                  hintText: "Enter a user name",
+                  hintText: "Please enter your user name",
                   labelText: "Login",
                   border: OutlineInputBorder(),
                 )
@@ -117,7 +117,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 obscureText:
                 true, //hide the password when typing
                 decoration: const InputDecoration(
-                  hintText: "Enter your password",
+                  hintText: "Please enter your password",
                   labelText: "Password",
                   border: OutlineInputBorder(),
                 )
