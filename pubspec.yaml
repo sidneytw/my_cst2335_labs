@@ -62,6 +62,12 @@ flutter:
     - images/idea.png
     - images/question-mark.png
     - images/stop.png
+    - images/pexels-catscoming-2942319.jpg
+    - images/pexels-jeshoots-3688.jpg
+    - images/pexels-jill-wellington-1638660-257816.jpg
+    - images/pexels-markusspiske-112781.jpg
+    - images/pexels-pixabay-39521.jpg
+    - images/pexels-valeriya-1251208.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
