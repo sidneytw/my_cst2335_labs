@@ -11,58 +11,305 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
-        useMaterial3: true,
-      ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHome(),
+      debugShowCheckedModeBanner: false, // hide debug
     );
   }
 }
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
 
 
-  String imageSource = "images/question-mark.png";
-
+class MyHome extends StatelessWidget {
+  const MyHome({super.key});
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
+      /*
       appBar: AppBar(
-
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-
         title: Text("BROWSE CATEGORIES"),
       ),
+      */
+
       body: Center(
-
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
 
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-
-            Align(
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  "Not sure about exactly which recipe you're looking for? Do a search, or dive into our most popular categories.",
-                  style: TextStyle(
-                    fontSize: 20,
-                  ),
+          children: [
+            Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text("BROWSE CATEGORIES",
+                    style: const TextStyle(
+                        fontSize: 26, fontWeight: FontWeight.bold),
+                  )
+                ]
+            ),
+            Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text(
+                    "Not sure about exactly which recipe you're looking for? \n"
+                        "Do a search, or dive into our most popular categories.",
+                    style: const TextStyle(fontSize: 20),
+                  )
+                ]
+            ),
+            Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text("BY MEAT",
+                    style: const TextStyle(
+                        fontSize: 26, fontWeight: FontWeight.bold),
+                  )
+                ]
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Column(
+                  children: [
+                    Stack(
+                      alignment: AlignmentDirectional.center,
+                      children: [
+                        CircleAvatar(
+                            backgroundImage: AssetImage('images/beef.jpg'),
+                            radius: 70
+                        ),
+                        Text("BEEF",
+                          style: const TextStyle(
+                              fontSize: 26, fontWeight:FontWeight.bold, color: Colors.white),
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
-            )
-
-
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Stack(
+                        alignment: AlignmentDirectional.center,
+                        children: [
+                          CircleAvatar(
+                              backgroundImage: AssetImage('images/chicken.jpg'),
+                              radius: 70
+                          ),
+                          Text("CHICKEN",
+                            style: const TextStyle(
+                                fontSize: 26, fontWeight:FontWeight.bold, color: Colors.white),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Stack(
+                      alignment: AlignmentDirectional.center,
+                      children: [
+                        CircleAvatar(
+                            backgroundImage: AssetImage('images/pork.jpg'),
+                            radius: 70
+                        ),
+                        Text("PORK",
+                          style: const TextStyle(
+                              fontSize: 26, fontWeight:FontWeight.bold, color: Colors.white),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Stack(
+                      alignment: AlignmentDirectional.center,
+                      children: [
+                        CircleAvatar(
+                            backgroundImage: AssetImage('images/seafood.jpg'),
+                            radius: 70
+                        ),
+                        Text("SEAFOOD",
+                          style: const TextStyle(
+                              fontSize: 26, fontWeight:FontWeight.bold, color: Colors.white),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ],
+            ),
+            Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text("BY COURSE",
+                    style: const TextStyle(
+                        fontSize: 26, fontWeight: FontWeight.bold),
+                  )
+                ]
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Column(
+                  children: [
+                    Stack(
+                      alignment: AlignmentDirectional.bottomCenter,
+                      children: [
+                        CircleAvatar(
+                            backgroundImage: AssetImage('images/main_dishes.jpg'),
+                            radius: 70
+                        ),
+                        Text("Main Dishes",
+                          style: const TextStyle(
+                              fontSize: 20, fontWeight:FontWeight.bold, color: Colors.black, backgroundColor: Colors.white),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Stack(
+                      alignment: AlignmentDirectional.bottomCenter,
+                      children: [
+                        CircleAvatar(
+                            backgroundImage: AssetImage('images/salad.jpg'),
+                            radius: 70
+                        ),
+                        Text("Salad Recipe",
+                          style: const TextStyle(
+                              fontSize: 20, fontWeight:FontWeight.bold, color: Colors.black, backgroundColor: Colors.white),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Stack(
+                      alignment: AlignmentDirectional.bottomCenter,
+                      children: [
+                        CircleAvatar(
+                            backgroundImage: AssetImage('images/side_dishes.jpg'),
+                            radius: 70
+                        ),
+                        Text("Side Dishes",
+                          style: const TextStyle(
+                              fontSize: 20, fontWeight:FontWeight.bold, color: Colors.black, backgroundColor: Colors.white),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Stack(
+                      alignment: AlignmentDirectional.bottomCenter,
+                      children: [
+                        CircleAvatar(
+                            backgroundImage: AssetImage('images/crockpot.jpg'),
+                            radius: 70
+                        ),
+                        Text("Crockpot",
+                          style: const TextStyle(
+                              fontSize: 20, fontWeight:FontWeight.bold, color: Colors.black, backgroundColor: Colors.white),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ],
+            ),
+            Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text("BY DESSERT",
+                    style: const TextStyle(
+                        fontSize: 26, fontWeight: FontWeight.bold),
+                  )
+                ]
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Column(
+                  children: [
+                    Stack(
+                      alignment: AlignmentDirectional.bottomCenter,
+                      children: [
+                        CircleAvatar(
+                            backgroundImage: AssetImage('images/icecream.jpg'),
+                            radius: 70
+                        ),
+                        Text("Ice Cream",
+                          style: const TextStyle(
+                              fontSize: 20, fontWeight:FontWeight.bold, color: Colors.black, backgroundColor: Colors.white),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Stack(
+                      alignment: AlignmentDirectional.bottomCenter,
+                      children: [
+                        CircleAvatar(
+                            backgroundImage: AssetImage('images/brownies.jpg'),
+                            radius: 70
+                        ),
+                        Text("Brownies",
+                          style: const TextStyle(
+                              fontSize: 20, fontWeight:FontWeight.bold, color: Colors.black, backgroundColor: Colors.white),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Stack(
+                      alignment: AlignmentDirectional.bottomCenter,
+                      children: [
+                        CircleAvatar(
+                            backgroundImage: AssetImage('images/pies.jpg'),
+                            radius: 70
+                        ),
+                        Text("Pies",
+                          style: const TextStyle(
+                              fontSize: 20, fontWeight:FontWeight.bold, color: Colors.black, backgroundColor: Colors.white),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Stack(
+                      alignment: AlignmentDirectional.bottomCenter,
+                      children: [
+                        CircleAvatar(
+                            backgroundImage: AssetImage('images/cookies.jpg'),
+                            radius: 70
+                        ),
+                        Text("Cookies",
+                          style: const TextStyle(
+                              fontSize: 20, fontWeight:FontWeight.bold, color: Colors.black, backgroundColor: Colors.white),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ],
+            ),
           ],
         ),
       ),
