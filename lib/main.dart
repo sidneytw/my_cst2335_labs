@@ -51,7 +51,7 @@ class MyHome extends StatelessWidget {
                   Text(
                     "Not sure about exactly which recipe you're looking for? \n"
                         "Do a search, or dive into our most popular categories.",
-                    style: const TextStyle(fontSize: 20),
+                    style: const TextStyle(fontSize: 15),
                   )
                 ]
             ),
@@ -60,7 +60,7 @@ class MyHome extends StatelessWidget {
                 children: [
                   Text("BY MEAT",
                     style: const TextStyle(
-                        fontSize: 26, fontWeight: FontWeight.bold),
+                        fontSize: 20, fontWeight: FontWeight.bold),
                   )
                 ]
             ),
@@ -74,11 +74,11 @@ class MyHome extends StatelessWidget {
                       children: [
                         CircleAvatar(
                             backgroundImage: AssetImage('images/beef.jpg'),
-                            radius: 70
+                            radius: 40
                         ),
                         Text("BEEF",
                           style: const TextStyle(
-                              fontSize: 26, fontWeight:FontWeight.bold, color: Colors.white),
+                              fontSize: 18, fontWeight:FontWeight.bold, color: Colors.white),
                         ),
                       ],
                     ),
@@ -92,11 +92,11 @@ class MyHome extends StatelessWidget {
                         children: [
                           CircleAvatar(
                               backgroundImage: AssetImage('images/chicken.jpg'),
-                              radius: 70
+                              radius: 40
                           ),
                           Text("CHICKEN",
                             style: const TextStyle(
-                                fontSize: 26, fontWeight:FontWeight.bold, color: Colors.white),
+                                fontSize: 18, fontWeight:FontWeight.bold, color: Colors.white),
                           ),
                         ],
                       ),
@@ -110,11 +110,11 @@ class MyHome extends StatelessWidget {
                       children: [
                         CircleAvatar(
                             backgroundImage: AssetImage('images/pork.jpg'),
-                            radius: 70
+                            radius: 40
                         ),
                         Text("PORK",
                           style: const TextStyle(
-                              fontSize: 26, fontWeight:FontWeight.bold, color: Colors.white),
+                              fontSize: 18, fontWeight:FontWeight.bold, color: Colors.white),
                         ),
                       ],
                     ),
@@ -128,11 +128,11 @@ class MyHome extends StatelessWidget {
                       children: [
                         CircleAvatar(
                             backgroundImage: AssetImage('images/seafood.jpg'),
-                            radius: 70
+                            radius: 40
                         ),
                         Text("SEAFOOD",
                           style: const TextStyle(
-                              fontSize: 26, fontWeight:FontWeight.bold, color: Colors.white),
+                              fontSize: 18, fontWeight:FontWeight.bold, color: Colors.white),
                         ),
                       ],
                     ),
@@ -159,11 +159,11 @@ class MyHome extends StatelessWidget {
                       children: [
                         CircleAvatar(
                             backgroundImage: AssetImage('images/main_dishes.jpg'),
-                            radius: 70
+                            radius: 40
                         ),
                         Text("Main Dishes",
                           style: const TextStyle(
-                              fontSize: 20, fontWeight:FontWeight.bold, color: Colors.black, backgroundColor: Colors.white),
+                              fontSize: 15, fontWeight:FontWeight.bold, color: Colors.black, backgroundColor: Colors.white),
                         ),
                       ],
                     ),
@@ -177,11 +177,11 @@ class MyHome extends StatelessWidget {
                       children: [
                         CircleAvatar(
                             backgroundImage: AssetImage('images/salad.jpg'),
-                            radius: 70
+                            radius: 40
                         ),
                         Text("Salad Recipe",
                           style: const TextStyle(
-                              fontSize: 20, fontWeight:FontWeight.bold, color: Colors.black, backgroundColor: Colors.white),
+                              fontSize: 15, fontWeight:FontWeight.bold, color: Colors.black, backgroundColor: Colors.white),
                         ),
                       ],
                     ),
@@ -195,11 +195,11 @@ class MyHome extends StatelessWidget {
                       children: [
                         CircleAvatar(
                             backgroundImage: AssetImage('images/side_dishes.jpg'),
-                            radius: 70
+                            radius: 40
                         ),
                         Text("Side Dishes",
                           style: const TextStyle(
-                              fontSize: 20, fontWeight:FontWeight.bold, color: Colors.black, backgroundColor: Colors.white),
+                              fontSize: 15, fontWeight:FontWeight.bold, color: Colors.black, backgroundColor: Colors.white),
                         ),
                       ],
                     ),
@@ -213,11 +213,11 @@ class MyHome extends StatelessWidget {
                       children: [
                         CircleAvatar(
                             backgroundImage: AssetImage('images/crockpot.jpg'),
-                            radius: 70
+                            radius: 40
                         ),
                         Text("Crockpot",
                           style: const TextStyle(
-                              fontSize: 20, fontWeight:FontWeight.bold, color: Colors.black, backgroundColor: Colors.white),
+                              fontSize: 15, fontWeight:FontWeight.bold, color: Colors.black, backgroundColor: Colors.white),
                         ),
                       ],
                     ),
@@ -238,75 +238,75 @@ class MyHome extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Column(
-                  children: [
-                    Stack(
-                      alignment: AlignmentDirectional.bottomCenter,
+                  //children: [
+                   // Stack(
+                     // alignment: AlignmentDirectional.bottomCenter,
                       children: [
                         CircleAvatar(
                             backgroundImage: AssetImage('images/icecream.jpg'),
-                            radius: 70
+                            radius: 40
                         ),
                         Text("Ice Cream",
                           style: const TextStyle(
-                              fontSize: 20, fontWeight:FontWeight.bold, color: Colors.black, backgroundColor: Colors.white),
+                              fontSize: 15, fontWeight:FontWeight.bold, color: Colors.black),
                         ),
                       ],
-                    ),
-                  ],
+                    //),
+                  //],
                 ),
                 Column(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Stack(
-                      alignment: AlignmentDirectional.bottomCenter,
+                 // children: [
+                   // Stack(
+                     // alignment: AlignmentDirectional.bottomCenter,
                       children: [
                         CircleAvatar(
                             backgroundImage: AssetImage('images/brownies.jpg'),
-                            radius: 70
+                            radius: 40
                         ),
                         Text("Brownies",
                           style: const TextStyle(
-                              fontSize: 20, fontWeight:FontWeight.bold, color: Colors.black, backgroundColor: Colors.white),
+                              fontSize: 15, fontWeight:FontWeight.bold, color: Colors.black),
                         ),
                       ],
-                    ),
-                  ],
+                    //),
+                  //],
                 ),
                 Column(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Stack(
-                      alignment: AlignmentDirectional.bottomCenter,
+                //  children: [
+                  //  Stack(
+                    //  alignment: AlignmentDirectional.bottomCenter,
                       children: [
                         CircleAvatar(
                             backgroundImage: AssetImage('images/pies.jpg'),
-                            radius: 70
+                            radius: 40
                         ),
                         Text("Pies",
                           style: const TextStyle(
-                              fontSize: 20, fontWeight:FontWeight.bold, color: Colors.black, backgroundColor: Colors.white),
+                              fontSize: 15, fontWeight:FontWeight.bold, color: Colors.black),
                         ),
                       ],
-                    ),
-                  ],
+                   // ),
+                  //],
                 ),
                 Column(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Stack(
-                      alignment: AlignmentDirectional.bottomCenter,
+                 // children: [
+                   // Stack(
+                     // alignment: AlignmentDirectional.bottomCenter,
                       children: [
                         CircleAvatar(
                             backgroundImage: AssetImage('images/cookies.jpg'),
-                            radius: 70
+                            radius: 40
                         ),
                         Text("Cookies",
                           style: const TextStyle(
-                              fontSize: 20, fontWeight:FontWeight.bold, color: Colors.black, backgroundColor: Colors.white),
+                              fontSize: 15, fontWeight:FontWeight.bold, color: Colors.black),
                         ),
                       ],
-                    ),
-                  ],
+                    //),
+                 // ],
                 ),
               ],
             ),
