@@ -50,7 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
     EncryptedSharedPreferences esp = EncryptedSharedPreferences();
     await esp.setString('username', login.text);
     await esp.setString('password', password.text);
-    await esp.setString('shouldLoad', 'true'); // set the flag as true when saving information
+    //await esp.setString('shouldLoad', 'true'); // set the flag as true when saving information
     ScaffoldMessenger.of(context).showSnackBar(
       const SnackBar(content: Text('Credentials saved')),
     );
@@ -61,7 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
     EncryptedSharedPreferences esp = EncryptedSharedPreferences();
     await esp.remove('username');
     await esp.remove('password');
-    await esp.setString('shouldLoad', 'false'); // set the flag as true if not saving information
+    //await esp.setString('shouldLoad', 'false'); // set the flag as true if not saving information
     ScaffoldMessenger.of(context).showSnackBar(
       const SnackBar(content: Text('Credentials cleared')),
     );
@@ -71,10 +71,11 @@ class _MyHomePageState extends State<MyHomePage> {
     EncryptedSharedPreferences esp = EncryptedSharedPreferences();
     final String? savedUsername = await esp.getString('username');
     final String? savedPassword = await esp.getString('password');
-    final String? shouldLoad = await esp.getString('shouldLoad'); // load the information if the flag was true
+    //final String? shouldLoad = await esp.getString('shouldLoad'); // load the information if the flag was true
 
 
-    if (savedUsername != null && savedPassword != null && shouldLoad == 'true') {
+    if (savedUsername != null && savedPassword != null &&
+        savedUsername.isNotEmpty && savedPassword.isNotEmpty) {
       setState(() {
         login.text = savedUsername;
         password.text = savedPassword;
